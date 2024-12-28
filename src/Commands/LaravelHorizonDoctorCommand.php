@@ -12,7 +12,7 @@ class LaravelHorizonDoctorCommand extends Command
 
     public function handle(): int
     {
-        $horizonConfigs = config('horizon.environments.production');
+        $horizonConfigs = config('horizon.environments.'.app()->environment());
         $default = config('horizon.defaults');
         $queueConfigs = config('queue.connections');
 
