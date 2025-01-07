@@ -24,7 +24,7 @@ class LaravelHorizonDoctorCommand extends Command
 
     protected function checkEnvironment($env)
     {
-        $horizonConfigs = config('horizon.environments.$env');
+        $horizonConfigs = config("horizon.environments.$env");
         $default = config('horizon.defaults');
         $queueConfigs = config('queue.connections');
 
